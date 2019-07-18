@@ -1,5 +1,7 @@
+import os from "os"
+
 describe("tests", () => {
   it("works!", () => {
-    expect(true).toBe(true)
+    expect(os.tmpdir()).toBeDefined()
   })
 })
