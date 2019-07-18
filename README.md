@@ -1,4 +1,4 @@
-# template-npLm-project
+# template-npm-project
 
 This repo represents a simple project with an ever improving build pipeline intended for building and publishing npm modules.
 
