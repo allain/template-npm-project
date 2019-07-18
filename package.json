@@ -1,16 +1,24 @@
 {
   "name": "template-npm-project",
   "version": "1.0.0",
-  "description": "A project for testing out the hijack tool",
+  "description": "A template project for building npm modules.",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build:cjs && npm run build:esm && npm run build:bin",
+    "build:bin": "rollup src/bin.js -o dist/bin.js -f cjs",
+    "build:cjs": "rollup src/index.js -o dist/index.cjs.js -f cjs",
+    "build:esm": "rollup src/index.js -o dist/index.esm.js -f esm",
     "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/allain/template-npm-project.git"
   },
-  "keywords": [],
+  "keywords": [
+    "template",
+    "build",
+    "rollup"
+  ],
   "author": "Allain Lalonde <allain.lalonde@gmail.com>",
   "license": "ISC",
   "bugs": {
@@ -18,7 +26,11 @@
   },
   "homepage": "https://github.com/allain/template-npm-project#readme",
   "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
     "@types/jest": "^24.0.15",
-    "jest": "^24.8.0"
+    "babel-jest": "^24.7.1",
+    "jest": "^24.8.0",
+    "rollup": "^1.17.0"
   }
 }
