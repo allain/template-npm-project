@@ -8,6 +8,7 @@
     "build:bin": "rollup src/bin.js -o dist/bin.js -f cjs",
     "build:cjs": "rollup src/index.js -o dist/index.cjs.js -f cjs",
     "build:esm": "rollup src/index.js -o dist/index.esm.js -f esm",
+    "clean": "rimraf dist/ coverage/",
     "test": "jest"
   },
   "repository": {
@@ -31,6 +32,7 @@
     "@types/jest": "^24.0.15",
     "babel-jest": "^24.7.1",
     "jest": "^24.8.0",
+    "rimraf": "^2.6.3",
     "rollup": "^1.17.0"
   }
 }
