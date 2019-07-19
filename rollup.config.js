@@ -14,8 +14,8 @@ export default [
         format: "esm"
         // exports: "named"
       }
-    ],
-    plugins: [resolve()]
+    ]
+    // plugins: [resolve()]
   },
   {
     input: "src/bin.js",
@@ -23,7 +23,7 @@ export default [
       file: "dist/bin.js",
       format: "cjs"
       // exports: "named"
-    },
-    plugins: [resolve()]
+    }
+    // plugins: [resolve()]
   }
 ]
