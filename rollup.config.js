@@ -1,3 +1,5 @@
+import resolve from "rollup-plugin-node-resolve"
+
 export default [
   {
     input: "src/index.js",
@@ -12,7 +14,8 @@ export default [
         format: "esm",
         exports: "named"
       }
-    ]
+    ],
+    plugins: [resolve()]
   },
   {
     input: "src/bin.js",
@@ -20,6 +23,7 @@ export default [
       file: "dist/bin.js",
       format: "cjs",
       exports: "named"
-    }
+    },
+    plugins: [resolve()]
   }
 ]
