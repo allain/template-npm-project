@@ -4,10 +4,7 @@
   "description": "A template project for building npm modules.",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:cjs && npm run build:esm && npm run build:bin",
-    "build:bin": "rollup src/bin.js -o dist/bin.js -f cjs",
-    "build:cjs": "rollup src/index.js -o dist/index.cjs.js -f cjs",
-    "build:esm": "rollup src/index.js -o dist/index.esm.js -f esm",
+    "build": "rollup --config ./rollup.config.js",
     "clean": "rimraf dist/ coverage/",
     "test": "jest"
   },
