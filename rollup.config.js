@@ -4,11 +4,13 @@ export default [
     output: [
       {
         file: "dist/index.cjs.js",
-        format: "cjs"
+        format: "cjs",
+        exports: "named"
       },
       {
         file: "dist/index.esm.js",
-        format: "esm"
+        format: "esm",
+        exports: "named"
       }
     ]
   },
@@ -16,7 +18,8 @@ export default [
     input: "src/bin.js",
     output: {
       file: "dist/bin.js",
-      format: "cjs"
+      format: "cjs",
+      exports: "named"
     }
   }
 ]
