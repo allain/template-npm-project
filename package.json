@@ -1,16 +1,12 @@
 {
-  "name": "template-typescript-nodejs",
+  "name": "template-npm-project",
   "version": "1.0.0",
   "description": "A template project for building npm modules.",
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.cjs.js",
+  "main": "index.js",
   "scripts": {
     "build": "rollup --config ./rollup.config.js",
-    "build:watch": "npm run build -- --watch",
     "clean": "rimraf dist/ coverage/",
-    "dev": "concurrently --kill-others 'npm run build:watch' 'npm run test:watch'",
-    "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -32,13 +28,8 @@
     "@babel/preset-env": "^7.4.3",
     "@types/jest": "^24.0.15",
     "babel-jest": "^24.7.1",
-    "concurrently": "^4.1.1",
     "jest": "^24.8.0",
     "rimraf": "^2.6.3",
-    "rollup": "^1.17.0",
-    "rollup-plugin-typescript": "^1.0.1",
-    "ts-jest": "^24.0.2",
-    "tslib": "^1.10.0",
-    "typescript": "^3.5.3"
+    "rollup": "^1.17.0"
   }
 }
